@@ -1,9 +1,9 @@
 import "./styles.scss";
 
-// export default funtion name() {
-//   return (
-//     <>
-
-//     </>
-//   )
-// }
+export default function Header() {
+  return (
+    <>
+      <h1>Sarve</h1>
+    </>
+  );
+}
