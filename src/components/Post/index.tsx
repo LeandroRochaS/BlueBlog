@@ -27,14 +27,20 @@ export default function Post(props: PostProps) {
           )}
 
           <div className="flex mt-1">
-            <div className="img-profile">
-              <div
-                className="img-profile-content"
-                style={{ backgroundImage: `url(${props.imgProfile})` }}
-              ></div>
-            </div>
-            <div className="desc-profile ml-2">
-              <h6 className="color-blue">Fulano de tal</h6>
+            {props.className === "item-1" && (
+              <div className="img-profile">
+                <div
+                  className="img-profile-content"
+                  style={{ backgroundImage: `url(${props.imgProfile})` }}
+                ></div>
+              </div>
+            )}
+
+            <div className="desc-profile flex-space-between ml-2">
+              <div>
+                <h6 className="color-blue">by Fulano de tal</h6>
+                <p>@fulano</p>
+              </div>
               <p>Aug 2, 2020 - 8 min read</p>
             </div>
           </div>
