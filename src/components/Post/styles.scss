@@ -5,7 +5,7 @@
 }
 
 .post-opacity {
-  background: linear-gradient(180deg, rgba(6, 9, 15, 0.3) 0%, #06090f 100%);
+  background: linear-gradient(180deg, rgba(6, 9, 15, 0) 0.01%, #06090f 83.01%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -17,4 +17,10 @@
 
 .desc-profile {
   width: 100%;
+  gap: 7px;
+
+  img {
+    width: 6px;
+    height: 6px;
+  }
 }

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 @import "./sass/_colors";
@@ -11,5 +12,33 @@
 
 body {
   width: 100%;
-  background-color: #050607;
+  background: $black-dark;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    padding-right: 2px;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $black-light;
+    border-radius: 8px;
+  }
 }
+
+.hidden {
+  overflow: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+svg,
+img {
+  width: 100%;
+}
+
+@import "./sass/menu";
+@import "./sass/buttons";

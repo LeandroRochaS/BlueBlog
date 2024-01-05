@@ -21,6 +21,46 @@ $gray-5: #7c7d80;
 $gray-6: #8d8e90;
 $gray-7: #a5a6a8;
 
+// Auxiliary-colors
+
+$red-normal: #f04d3d;
+$red-dark: #d03333;
+$red-light: #f05454;
+
+$green-normal: #0bb07b;
+$green-dark: #28bb49;
+$green-light: #50e170;
+
+$yellow-normal: #ffce52;
+$yellow-dark: #d9b043;
+$yellow-light: #ffd76b;
+
+$primary-color: $blue-normal;
+
+.color-white {
+  color: $white-normal;
+}
+
+.color-primary {
+  color: $blue-dark;
+}
+
+.color-gray {
+  color: $gray-5;
+}
+
+.color-red {
+  color: $red-normal;
+}
+
+.color-green {
+  color: $green-normal;
+}
+
+.color-yellow {
+  color: $yellow-normal;
+}
+
 .color-blue {
   color: $blue-normal;
 }

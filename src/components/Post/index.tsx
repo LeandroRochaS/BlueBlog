@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import "./styles.scss";
+import pontoSvg from "../../images/svg/ponto.svg";
 
 type PostProps = {
   children: ReactNode;
@@ -21,7 +22,7 @@ export default function Post(props: PostProps) {
         <div className="post-opacity">
           <div className="img-post"></div>
           <h5>{props.subtitle}</h5>
-          <h3>{props.title}</h3>
+          <h4>{props.title}</h4>
           {props.className === "item-1" && (
             <p className=" mt-1">{props.children}</p>
           )}
@@ -36,12 +37,25 @@ export default function Post(props: PostProps) {
               </div>
             )}
 
-            <div className="desc-profile flex-space-between ml-2">
+            <div
+              className={`desc-profile ${
+                props.className != "item-1"
+                  ? `flex-aling-center`
+                  : `flex-space-between`
+              }`}
+            >
               <div>
-                <h6 className="color-blue">by Fulano de tal</h6>
-                <p>@fulano</p>
+                <p className="desc-name color-white">by Fulano de tal</p>
+                {props.className === "item-1" && <p>@fulano</p>}
               </div>
-              <p>Aug 2, 2020 - 8 min read</p>
+              {props.className != "item-1" && (
+                <img src={pontoSvg} alt="ponto" />
+              )}
+              {props.className === "item-1" && <p>Aug 2, 2020 - 8 min read</p>}
+              {props.className === "item-2" && <p>Aug 2, 2020 - 8 min read</p>}
+              {props.className != "item-2" && props.className != "item-1" && (
+                <p>Aug 2, 2020 - test</p>
+              )}
             </div>
           </div>
         </div>

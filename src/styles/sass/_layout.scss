@@ -1,16 +1,121 @@
+$container-xl: 1440px;
+$container-l: 1216px;
+$container-m: 960px;
+$container-s: 620px;
+$container-xs: 340px;
+$gutter: 32px;
+
+@mixin responsive($device) {
+  @if $device == xl {
+    @media screen and (min-width: $container-xl) {
+      @content;
+    }
+  } @else if $device == ul {
+    @media screen and (min-width: $container-m) {
+      @content;
+    }
+  } @else if $device == l {
+    @media screen and (max-width: $container-xl) and (min-width: $container-l) {
+      @content;
+    }
+  } @else if $device == m {
+    @media screen and (max-width: $container-l) and (min-width: $container-m) {
+      @content;
+    }
+  } @else if $device == s {
+    @media screen and (max-width: $container-m) {
+      @content;
+    }
+  } @else if $device == xs {
+    @media screen and (max-width: $container-xs) {
+      @content;
+    }
+  }
+}
+
+@function grid($col, $total: 12) {
+  @return percentage($col / $total);
+}
+
+@for $i from 1 through 12 {
+  .grid-#{$i} {
+    width: calc(#{grid($i)} - #{$gutter});
+    margin: $gutter / 2;
+
+    padding: 16px 0px;
+    float: left;
+
+    @include responsive(s) {
+      width: calc(100% - #{$gutter});
+      float: none;
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  .grid-#{$i}-offset {
+    margin-left: calc(#{grid($i)} - #{$gutter});
+    padding: 16px 0px;
+    float: left;
+  }
+}
+
+.container {
+  max-width: $container-l;
+  margin: 0 auto;
+  padding: 16px 24px;
+
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @include responsive(s) {
+    flex-direction: column;
+    padding: 16px 16px;
+  }
+}
+
+.row {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 .flex {
   display: flex;
 }
-a {
-  text-decoration: none;
-  color: $white-dark;
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-header {
-  max-width: 1200px;
-  margin: 0 auto;
+.flex-start-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
 
-  padding: 24px;
+.flex-end-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+
+.flex-start-column {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .flex-space-between {
@@ -19,57 +124,72 @@ header {
   align-items: center;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.flex-aling-center {
+  display: flex;
+  align-items: center;
+}
 
-  padding: 8px 24px;
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+a {
+  text-decoration: none;
+  color: $white-dark;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .border {
   border: 3px solid red;
 }
 
-.menu {
-  display: flex;
-  list-style: none;
-
-  li {
-    margin-left: 20px;
-  }
-}
-
-.input-search {
-  height: 40px;
-  min-width: 300px;
-
-  background-color: $black-light;
-  border: 0;
-  border-radius: 4px;
-
-  color: $white-light;
-  padding: 8px;
-}
-
-.nav-link {
-  display: inline-block;
-  padding: 8px;
-
-  transition: 0.5s ease;
-
-  &:hover {
-    opacity: 0.7;
-  }
+hr {
+  background-color: #151b26;
+  height: 1px;
+  border: none;
+  width: 100%;
 }
 
 .img-profile {
   width: 48px;
   height: 48px;
   background-color: $gray-2;
-  border-radius: 50%;
+  border-radius: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 1rem;
 
   .img-profile-content {
     width: 100%;
@@ -78,6 +198,30 @@ header {
     background-position: center;
     background-size: cover;
   }
+}
+
+.article-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 56px;
+  background-color: $black-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .article-img-content {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+b {
+  background: var(
+    --gradient-g-0,
+    linear-gradient(225deg, #5390e3 8.12%, #1357b3 92.21%)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .posts-container {
