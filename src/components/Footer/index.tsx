@@ -26,7 +26,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="grid-2">
+          <div className="grid-3">
             <div className="flex-column-start" style={{ gap: "20px" }}>
               <h4>Categorias</h4>
               <p> Tecnologia</p>
@@ -35,34 +35,53 @@ export default function Footer() {
               <p> Esportes</p>
             </div>
           </div>
-          <div className="grid-1"></div>
-          <div className="grid-6 px-5 flex-column-start">
-            <div className="row">
-              <h4>Quer ser avisado dos novos posts do blog </h4>
+          <div className="grid-6 flex-column-start">
+            <h4>Quer ser avisado dos novos posts do blog </h4>
 
-              <div className="flex mt-2">
-                <input
-                  type="text"
-                  className="w-100"
-                  placeholder="Digite seu e-mail"
-                />
-                <button className="btn b-0 ml-1 w-50">Inscrever-se</button>
-              </div>
+            <div className="flex mt-2 w-100">
+              <input
+                type="text"
+                className="w-100"
+                placeholder="Digite seu e-mail"
+              />
+              <button className="btn b-0 ml-1 w-50">Inscrever-se</button>
             </div>
           </div>
         </div>
 
         <hr className="mt-5"></hr>
 
-        <div className="footer-last flex-space-between mt-5 mb-5">
-          <p className="h5Gray5">
-            © 2024 | Blog. Todos os direitos reservados.
-          </p>
-          <div className="footer-icons flex-space-between">
-            <img src={iconfacebook} className="icon-s" alt="icon-facebook" />
-            <img src={iconinstagram} className="icon-s" alt="icon-instagram" />
-            <img src={icontwitter} className="icon-s" alt="icon-twitter" />
-            <img src={iconyoutube} className="icon-s" alt="icon-youtube" />
+        <div className="row w-100">
+          <div className="grid-9">
+            <p className="h5Gray5">
+              © 2024 | Blog. Todos os direitos reservados.
+            </p>
+          </div>
+          <div className=" grid-3">
+            <img
+              src={iconfacebook}
+              style={{ cursor: "pointer" }}
+              className="icon-s"
+              alt="icon-facebook"
+            />
+            <img
+              src={iconinstagram}
+              style={{ cursor: "pointer" }}
+              className="icon-s ml-2"
+              alt="icon-instagram"
+            />
+            <img
+              src={icontwitter}
+              style={{ cursor: "pointer" }}
+              className="icon-s ml-2"
+              alt="icon-twitter"
+            />
+            <img
+              src={iconyoutube}
+              style={{ cursor: "pointer" }}
+              className="icon-s ml-2"
+              alt="icon-youtube"
+            />
           </div>
         </div>
       </footer>
