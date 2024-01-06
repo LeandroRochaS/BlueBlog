@@ -1,4 +1,3 @@
-import "./styles.scss";
 import blogLogo from "../../images/svg/blog.svg";
 
 export default function Hero() {

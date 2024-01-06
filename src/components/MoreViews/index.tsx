@@ -1,4 +1,3 @@
-import "./styles.scss";
 import thumb1 from "../../images/png/01.png";
 
 export default function MoreViews() {
