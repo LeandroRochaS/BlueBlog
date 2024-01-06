@@ -53,8 +53,10 @@ $gutter: 32px;
 }
 
 @for $i from 1 through 12 {
-  .grid-#{$i}-offset {
-    margin-left: calc(#{grid($i)} - #{$gutter});
+  .grid-nobreak-#{$i} {
+    width: calc(#{grid($i)} - #{$gutter});
+    margin: calc($gutter / 2);
+
     padding: 16px 0px;
     float: left;
   }
@@ -86,6 +88,19 @@ $gutter: 32px;
     clear: both;
   }
 }
+.row2 {
+  display: flex;
+  align-items: center;
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.aling-center {
+  align-self: center !important;
+}
 
 .flex {
   display: flex;
@@ -102,6 +117,13 @@ $gutter: 32px;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
+}
+
+.flex-column-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .flex-end-row {
@@ -134,6 +156,13 @@ $gutter: 32px;
   flex-direction: column;
 }
 
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .w-auto {
   width: auto;
 }
@@ -158,9 +187,97 @@ $gutter: 32px;
   width: 25%;
 }
 
+.b-0 {
+  border: 0;
+}
+
+.b-black {
+  border: 1px solid $black-light;
+}
+
+.b-black-2 {
+  border: 2px solid $black-light;
+}
+
+.bb-black {
+  border-bottom: 1px solid $black-light;
+}
+
+.bt-black {
+  border-top: 1px solid $black-light;
+}
+
+.bl-black {
+  border-left: 1px solid $black-light;
+}
+
+.br-black {
+  border-right: 1px solid $black-light;
+}
+
+.bg-gray {
+  background-color: $black-normal;
+}
+
+.bb-gray {
+  border-bottom: 2px solid $black-normal;
+}
+
+.bt-gray {
+  border-top: 2px solid $black-normal;
+}
+
+.bl-gray {
+  border-left: 2px solid $black-normal;
+}
+
+.br-gray {
+  border-right: 2px solid $black-normal;
+}
+
+.profile {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+}
+
+.profile-big {
+  width: 128px;
+  height: 128px;
+
+  border-radius: 50%;
+}
+
+.profile-medium-x {
+  width: 96px;
+  height: 96px;
+
+  border-radius: 50%;
+}
+
+.profile-medium {
+  width: 78px;
+  height: 78px;
+
+  border-radius: 50%;
+}
+
+.profile-img {
+  border-radius: 50%;
+}
+
 a {
   text-decoration: none;
   color: $white-dark;
+}
+
+.checkbox {
+  align-items: center;
+  input {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 footer {
@@ -174,11 +291,62 @@ footer {
   border: 3px solid red;
 }
 
+.card {
+  border-radius: 4px;
+  background-color: rgba(21, 27, 38, 0);
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: rgba(21, 27, 38, 0.5);
+  }
+}
+
+.img-post {
+  height: 420px;
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+  transition: 1s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.form-login {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 hr {
   background-color: #151b26;
   height: 1px;
   border: none;
   width: 100%;
+}
+
+.img-banner {
+  width: 100%;
+  max-height: 420px;
+  border-radius: 4px;
+
+  img {
+    object-fit: cover;
+    transition: 0.5s ease;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.card-post {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .img-profile {
@@ -197,6 +365,20 @@ hr {
     border-radius: 50%;
     background-position: center;
     background-size: cover;
+  }
+}
+
+.thumb {
+  img {
+    transition: all 0.7s ease;
+
+    transform: scale(1.05);
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -232,6 +414,14 @@ b {
     "a a a c d"
     "a a a c d";
   grid-gap: 7px;
+
+  @include responsive(s) {
+    grid-template-areas:
+      "a a a a a"
+      "b b b b b"
+      "c c c c c"
+      "d d d d d";
+  }
 }
 
 .item-1 {

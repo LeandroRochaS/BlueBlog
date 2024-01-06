@@ -64,3 +64,13 @@ $primary-color: $blue-normal;
 .color-blue {
   color: $blue-normal;
 }
+
+.color-destaque {
+  background: var(
+    --gradient-g-0,
+    linear-gradient(225deg, #5390e3 8.12%, #1357b3 92.21%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

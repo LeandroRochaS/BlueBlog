@@ -4,6 +4,11 @@
   padding: 8px 24px;
   background: linear-gradient(225deg, #5390e3 8.12%, #1357b3 92.21%);
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-login {
+  padding: 12px 24px;
 }
 
 a {
@@ -19,6 +24,11 @@ a {
 
 input {
   accent-color: $primary-color;
+}
+
+select,
+option {
+  height: 48px;
 }
 
 input,

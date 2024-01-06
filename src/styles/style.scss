@@ -9,10 +9,11 @@
 @import "./sass/_typography";
 @import "./sass/_layout";
 @import "./sass/spacing";
+@import "./sass/icons";
 
 body {
   width: 100%;
-  background: $black-dark;
+  background: #06090f;
   position: relative;
 
   &::-webkit-scrollbar {
