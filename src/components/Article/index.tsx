@@ -27,7 +27,10 @@ export default function Article({ title, subtitle, imgArticle }: ArticleProps) {
               </div>
             </div>
             <div className="article-right">
-              <a className="flex-aling-center color-primary">
+              <a
+                className="flex-aling-center color-primary nav-link"
+                style={{ cursor: "pointer" }}
+              >
                 Explorar mais artigos {">"}
               </a>
             </div>
