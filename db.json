@@ -1,0 +1,159 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "id_user": 1,
+      "date": "14 NOV 2021",
+      "imageUrl": "https://nyousefali.com.br/blog/img/06.png",
+      "category": "games",
+      "title": "O que tem de novo no PS5? Tudo o que você precisa saber.",
+      "resume": "Acabou de sair esse grande lançamento dos consoles. Leia esse artigo para saber das novidades!",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra.",
+      "duration": "10",
+      "star": "3",
+      "views": "3",
+      "status": true
+    },
+    {
+      "id": 2,
+      "id_user": 1,
+      "date": "18 SET 2021",
+      "imageUrl": "https://nyousefali.com.br/blog/img/07.png",
+      "category": "tecnologia",
+      "title": "Novos processadores da 12° geração da intel chegaram.",
+      "resume": "Os novos processadores da intel vieram para bater de frente com os novos Ryzen? Tem nova arquitetura semelhante à prática da grande Apple.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra.",
+      "duration": "7",
+      "star": "5",
+      "views": "3",
+      "status": true
+    },
+    {
+      "id": 3,
+      "id_user": 3,
+      "date": "01 NOV 2021",
+      "imageUrl": "https://nyousefali.com.br/blog/img/09.png",
+      "category": "fotografia",
+      "title": "Qual a melhor câmera CxB para fotos e vídeos em 2021?",
+      "resume": "Com o lançamento de novas câmeras, qual a melhor? DSLR ou mirrorless? Qual o melhor custo benefício?",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra.",
+      "duration": "15",
+      "star": "5",
+      "views": "3",
+      "status": true
+    },
+    {
+      "id": 4,
+      "id_user": 3,
+      "date": "10 OUT 2021",
+      "imageUrl": "https://nyousefali.com.br/blog/img/03.png",
+      "category": "cinema",
+      "title": "Top 10 Filmes de 2021.",
+      "resume": "Por mais que a pandemia tenha atrapalhado a gravação de vários filmes, temos muitas novidades para esse final de ano. Confira os top 10 filmes que prometem para o final de 2021.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra.",
+      "duration": "8",
+      "star": "4",
+      "views": "3",
+      "status": true
+    },
+    {
+      "id": 5,
+      "id_user": 2,
+      "date": "07 OUT 2021",
+      "imageUrl": "https://nyousefali.com.br/blog/img/01.png",
+      "category": "tecnologia",
+      "title": "Novos Macbooks em 2021.",
+      "resume": "FINALMENTE! Os novos macbooks são lançados pela Apple com novos processadores e o termo PRO volta a fazer sentido! Os resultados são de supreender.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra.",
+      "duration": "8",
+      "star": "5",
+      "views": "3",
+      "status": true
+    },
+    {
+      "id": 6,
+      "id_user": 3,
+      "date": "07 OUT 2021",
+      "imageUrl": "https://nyousefali.com.br/blog/img/02.png",
+      "category": "tecnologia",
+      "title": "Air Pods 3° geração vs. Air Pods Pro",
+      "resume": "Com o lançamento dos novos airpods de 3 geração, eles se aproximaram dos air pods pro? Será que vale a pena? É isso que vamos falar nesse artigo.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra.",
+      "duration": "8",
+      "star": "3",
+      "views": "3",
+      "status": true
+    },
+    {
+      "id": 7,
+      "id_user": 1,
+      "date": "07 NOV 2021",
+      "imageUrl": "https://nyousefali.com.br/blog/img/05.png",
+      "category": "tecnologia",
+      "title": "Ainda vale a pena o PS4 Pro em 2021?",
+      "resume": "Com o lançamento dos novos consoles da Sony, ainda vale a pena o PS4 Pro. Os jogos já estão otimizados para a nova geração?",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra.",
+      "duration": "8",
+      "star": "4",
+      "views": "3",
+      "status": true
+    },
+    {
+      "id": 8,
+      "id_user": 1,
+      "date": "22 NOV 2021",
+      "imageUrl": "https://nyousefali.com.br/blog/img/08.png",
+      "category": "tecnologia",
+      "title": "PC Gamer em 2021? Está muito caro.",
+      "resume": "Vocês já viram os preços de comprar um PC Gamer em plena pandemia covid-19? Escrevi um pouco sobre o que esperar daqui pra frente.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra.",
+      "duration": "8",
+      "star": "4",
+      "views": "3",
+      "status": true
+    },
+    {
+      "id_user": 1,
+      "date": "2021-11-29",
+      "imageUrl": "https://nyousefali.com.br/blog/img/08.png",
+      "category": "cinema",
+      "title": "O novo filme do Spider-man no way home",
+      "resume": "Aqui é um resumo do posto: O novo filme do Spider-man no way home",
+      "content": "Conteúdo do post do spiderman\n",
+      "duration": "7",
+      "star": "4",
+      "views": "10",
+      "status": true,
+      "id": 9
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "user": "nasseryousef",
+      "name": "Nasser",
+      "surname": "Yousef Ali",
+      "token": "E10ADC3949BA59ABBE56E057F20F883E",
+      "description": "Front-End Dev & UI motion based in Brasília/Brazil, more than 8 years of experience in product development (user interaction, movement, performance, design faithful to design) and creating interfaces with out-of-the-box animations.",
+      "ImageProfile": "https://nyousefali.com.br/blog/profile/ny.jpg"
+    },
+    {
+      "id": 2,
+      "user": "emily",
+      "name": "Emily",
+      "surname": "Grace",
+      "token": "E10ADC3949BA59ABBE56E057F20F883E",
+      "description": "Sou UI Designer e apaixonada por tecnologia. Crio interfaces e escrevo para o blog.",
+      "ImageProfile": "https://nyousefali.com.br/blog/profile/emily.png"
+    },
+    {
+      "id": 3,
+      "user": "alex",
+      "name": "Alex",
+      "surname": "Jacob",
+      "token": "E10ADC3949BA59ABBE56E057F20F883E",
+      "description": "Sou fotógrafo profissional, amante de cinema e tecnologia. Colunista e nas horas vagas escrevo para o blog.",
+      "ImageProfile": "https://nyousefali.com.br/blog/profile/alex.png"
+    }
+  ]
+}
