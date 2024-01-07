@@ -9,7 +9,7 @@ type ArticleProps = {
 export default function Article({ title, subtitle, imgArticle }: ArticleProps) {
   return (
     <>
-      <section className="container mt-5">
+      <section className="container mt-9">
         <div className="article-container">
           <div className="flex-space-between">
             <div className="article-left">
