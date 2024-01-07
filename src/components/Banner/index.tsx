@@ -1,23 +1,23 @@
 import "./styles.scss";
-import img1 from "../../images/png/02.png";
+import { PostType } from "utils/types";
 
-export default function Banner() {
+export default function Banner(item: PostType) {
   return (
     <>
-      <section className="">
+      <section className="mt-5">
         <div className="img-banner hidden flex-center">
-          <img src={img1} alt="imagem de banner" />
+          <img src={item.imageUrl} alt="imagem de banner" />
         </div>
         <div className="row mt-3">
           <div className="mt-2 p-2">
-            <h6 className="color-gray text-center">01 JAN 2024</h6>
-            <h6 className="uppercase color-primary text-center">tecnologia</h6>
-
-            <h4 className="text-center">O que esperar do cinema em 2024?</h4>
-            <p className="mt-1  text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
-              urna pharetra ut ac, pellentesque.
-            </p>
+            <h6 className="color-gray text-center">{item.date}</h6>
+            <h6 className="uppercase color-primary text-center">
+              {item.category}
+            </h6>
+            <a href="">
+              <h4 className="text-center link-title">{item.title}</h4>
+            </a>
+            <p className="mt-1  text-center">{item.resume}</p>
             <div className="mt-4">
               <a href="" className="link color-primary flex-center">
                 Ler mais
