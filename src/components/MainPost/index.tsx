@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { API } from "../../services/api";
-import { PostType, UserProfileType } from "utils/types";
+import { PostType, UserProfileType } from "../../utils/types";
+import { Link } from "react-router-dom";
 
 export default function MainPost(item: PostType) {
   const [dataUser, setDataUser] = useState<UserProfileType>();
@@ -19,7 +20,9 @@ export default function MainPost(item: PostType) {
         <h6 className="color-gray">{item.date}</h6>
         <h6 className="uppercase color-primary">{item.category}</h6>
 
-        <h5>{item.title}</h5>
+        <Link to={`/post/${item.id}`} className="link-title">
+          <h5>{item.title}</h5>
+        </Link>
         <p>{item.resume}</p>
         <div className="flex-aling-center mt-2">
           <div className="profile mr-2">
