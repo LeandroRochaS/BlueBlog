@@ -605,6 +605,15 @@ b {
   -webkit-text-fill-color: transparent;
 }
 
+.mid-card {
+  margin-top: 100px;
+}
+@media screen and (max-width: 960px) {
+  .mid-card {
+    margin-top: 0px;
+  }
+}
+
 .posts-container {
   display: grid;
   grid-template-areas: "a a a b b" "a a a b b" "a a a c d" "a a a c d";
@@ -1051,6 +1060,10 @@ b {
     font-weight: 500;
     font-size: 96px;
   }
+}
+
+.link-title:hover {
+  text-decoration: underline;
 }
 
 .grid-1 {
@@ -1615,6 +1628,15 @@ b {
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.mid-card {
+  margin-top: 100px;
+}
+@media screen and (max-width: 960px) {
+  .mid-card {
+    margin-top: 0px;
+  }
 }
 
 .posts-container {

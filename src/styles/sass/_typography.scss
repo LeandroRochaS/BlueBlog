@@ -381,3 +381,9 @@ b {
     font-size: 96px;
   }
 }
+
+.link-title {
+  &:hover {
+    text-decoration: underline;
+  }
+}

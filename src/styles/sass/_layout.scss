@@ -406,6 +406,14 @@ b {
   -webkit-text-fill-color: transparent;
 }
 
+.mid-card {
+  margin-top: 100px;
+
+  @include responsive(s) {
+    margin-top: 0px;
+  }
+}
+
 .posts-container {
   display: grid;
   grid-template-areas:
