@@ -2,6 +2,7 @@ import "./styles.scss";
 import logoblog from "../../images/svg/logo.svg";
 import buscaSvg from "../../images/svg/buscainput.svg";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [menuMobile, setMenuMobile] = useState(false);
@@ -17,20 +18,20 @@ export default function Header() {
       <header className="flex-space-between">
         <div className="flex-space-between">
           <div className="logo">
-            <a>
+            <Link to={"/"}>
               <img src={logoblog} alt={descLogo} />
-            </a>
+            </Link>
           </div>
           <ul className="menu">
             <li>
-              <a href="#" className="nav-link">
+              <Link to={"/about"} className="nav-link">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="nav-link">
+              <Link to={"/contact"} className="nav-link">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -73,14 +74,14 @@ export default function Header() {
         >
           <ul>
             <li>
-              <a href="#" className="link-menu-mobile">
-                Sobre
-              </a>
+              <Link to={"/about"} className="link-menu-mobile">
+                About
+              </Link>
             </li>
             <li>
-              <a href="#" className="link-menu-mobile">
-                Contato
-              </a>
+              <Link to={"/contact"} className="link-menu-mobile">
+                Contact
+              </Link>
             </li>
             <li className="py-2 px-2">
               <form className="search w-100 mr-5">
