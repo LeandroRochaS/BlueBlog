@@ -6,9 +6,11 @@ import { useAuthContext } from "../../context/AuthContext";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PersonalData from "./PersonalData";
+import logout from "../../images/svg/log-out.svg";
 
 export default function Profile() {
-  const { isLoggedUser, userDataAuthContext } = useAuthContext();
+  const { isLoggedUser, userDataAuthContext, logoutAuthContext } =
+    useAuthContext();
   const navigate = useNavigate();
   const [addPostIsOpen, setAddPostIsOpen] = useState(false);
   const [showDataUser, setShowDataUser] = useState(false);
@@ -57,15 +59,24 @@ export default function Profile() {
                   />
                 </div>
 
-                <div>
+                <div className="mr-2">
                   <h4 className="mt-2">
                     {userData?.name} {userData?.surname}
                   </h4>
-                  <h6 className="color-gray">@{userData?.surname}</h6>
+                  <h6 className="color-gray">@{userData?.user}</h6>
                 </div>
+                <img
+                  src={logout}
+                  alt=""
+                  className="icon-small-2 mr-2"
+                  style={{ cursor: "pointer" }}
+                  onClick={logoutAuthContext}
+                />
               </div>
+
               <p>{userData?.description}</p>
             </div>
+
             <div className="grid-6 flex-center">
               <a
                 href="#"
@@ -77,7 +88,7 @@ export default function Profile() {
               </a>
               <a
                 href="#"
-                className="btn-secondary w-50 btn-secondary-layout"
+                className="btn-secondary w-50 btn-secondary-layout mr-2"
                 onClick={handleViewPost}
               >
                 <img src={iconUserSvg} className="icon-s mr-2" />{" "}
