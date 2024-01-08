@@ -61,8 +61,9 @@ export default function Login() {
               type="text"
               name="user"
               placeholder="Digite seu usuário"
-              id=""
+              id="user"
               className="search"
+              autoComplete="off"
               onChange={onChange}
             />
             <input
@@ -70,7 +71,8 @@ export default function Login() {
               name="password"
               placeholder="Digite sua senha"
               className="search mt-2"
-              id=""
+              id="password"
+              autoComplete="off"
               onChange={onChange}
             />
             <button type="submit" className="btn b-0 btn-login w-100 mt-3">
