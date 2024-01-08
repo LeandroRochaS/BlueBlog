@@ -1,58 +1,99 @@
-import AddPost from "../../components/AddPost";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect, useState } from "react";
 import Header from "../../components/Header";
-import Post from "../../components/Post";
-import Profile from "../../components/Profile";
 import logoBlog2 from "../../images/svg/blog-logo2.svg";
+import { UserLoginType } from "../../utils/types";
+import { API } from "../../services/api";
+import { useAuthContext } from "../../context/AuthContext";
 
 export default function Login() {
+  const [form, setForm] = useState<UserLoginType | any>();
+  const [user, setUser] = useState<UserLoginType | any>();
+  const { userDataAuthContext, isLoggedUser, loginAuthContext } =
+    useAuthContext();
+
+  async function handleLogin(e: any) {
+    e.preventDefault();
+
+    try {
+      const res = await API.get(`/user?user=${form.user}`);
+      if (res.data && res.data.length > 0) {
+        setUser(res.data[0]);
+        handleLoginContext();
+      } else {
+        console.log("Usuário não encontrado");
+      }
+    } catch (error) {
+      console.error("Erro ao buscar usuário", error);
+    }
+  }
+
+  useEffect(() => {
+    console.log("User Data:", userDataAuthContext);
+    console.log("Is Logged:", isLoggedUser);
+  }, [userDataAuthContext, isLoggedUser]);
+
+  function handleLoginContext() {
+    console.log(user);
+    if (user.user === form.user && user.password === form.password) {
+      console.log("logado");
+      loginAuthContext(user, user.token);
+    } else {
+      console.log("Usuário ou senha incorretos");
+    }
+  }
+
+  function onChange(e: any) {
+    const { value, name } = e.target;
+    setForm({ ...form, [name]: value });
+    console.log(form);
+  }
+
   return (
     <>
-      <div className="container">
-        <Header />
-        <div className="row mt-9">
-          <div className="grid-4 "></div>
-          <div className="grid-4 ">
-            <div className="flex-center">
-              <img src={logoBlog2} alt="" className="icon-xl" />
-            </div>
-            <h5 className="text-center">Olá, faça o login para continuar.</h5>
-            <form className="mt-4 form-login flex-column-center">
-              <input
-                type="text"
-                name="user"
-                placeholder="Digite seu usuário"
-                id=""
-                className="search"
-              />
-              <input
-                type="password"
-                name="password"
-                placeholder="Digite sua senha"
-                className="search mt-2"
-                id=""
-              />
-              <button className="btn b-0 btn-login w-100 mt-3">Entrar</button>
-              <div className="flex-space-between w-100 mt-3">
-                <div className="flex checkbox">
-                  <input
-                    className="mr-1"
-                    type="checkbox"
-                    name="lembrar"
-                    id=""
-                  />
-                  <p className="color-white">Lembrar-me</p>
-                </div>
-                <a href="/" className="link">
-                  Esqueceu a senha ?
-                </a>
-              </div>
-            </form>
+      <Header />
+      <div className="row">
+        <div className="grid-4 "></div>
+        <div className="grid-4 ">
+          <div className="flex-center">
+            <img src={logoBlog2} alt="" className="icon-xl" />
           </div>
-          <div className="grid-4 "></div>
+          <h5 className="text-center">Olá, faça o login para continuar.</h5>
+          <form
+            onSubmit={(e) => handleLogin(e)}
+            className="mt-4 form-login flex-column-center"
+          >
+            <input
+              type="text"
+              name="user"
+              placeholder="Digite seu usuário"
+              id=""
+              className="search"
+              onChange={onChange}
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Digite sua senha"
+              className="search mt-2"
+              id=""
+              onChange={onChange}
+            />
+            <button type="submit" className="btn b-0 btn-login w-100 mt-3">
+              Entrar
+            </button>
+            <div className="flex-space-between w-100 mt-3">
+              <div className="flex checkbox">
+                <input className="mr-1" type="checkbox" name="lembrar" id="" />
+                <p className="color-white">Lembrar-me</p>
+              </div>
+              <a href="/" className="link">
+                Esqueceu a senha ?
+              </a>
+            </div>
+          </form>
         </div>
-        <Profile />
-        <AddPost />
-        <Post />
+        <div className="grid-4 "></div>
       </div>
     </>
   );
