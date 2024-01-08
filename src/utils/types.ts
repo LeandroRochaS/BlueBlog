@@ -22,3 +22,8 @@ export type PostType = {
   views: string;
   status: boolean;
 };
+
+export type UserLoginType = {
+  user: string;
+  password: string;
+};
