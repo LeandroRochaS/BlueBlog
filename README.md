@@ -1,6 +1,6 @@
 # React + TypeScript + Vite
 
-json-server --watch db.json --port 8000
+json-server --watch db.json --port 4000
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
