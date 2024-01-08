@@ -5,6 +5,17 @@
   background: linear-gradient(225deg, #5390e3 8.12%, #1357b3 92.21%);
   border-radius: 4px;
   cursor: pointer;
+  border: 0;
+}
+
+.btn-secondary {
+  display: inline-block;
+  color: $white-light;
+  padding: 8px 24px;
+  background: $black-light;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 0;
 }
 
 .btn-login {
