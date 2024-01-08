@@ -4,6 +4,8 @@ import buscaSvg from "../../images/svg/buscainput.svg";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../context/AuthContext";
+import logout from "../../images/svg/log-out.svg";
+import GoToTop from "../../utils/GoTop";
 
 const initialValueForm = {
   search: "",
@@ -13,7 +15,8 @@ export default function Header() {
   const [menuMobile, setMenuMobile] = useState(false);
   const [form, setForm] = useState(initialValueForm);
   const navigate = useNavigate();
-  const { isLoggedUser, userDataAuthContext } = useAuthContext();
+  const { isLoggedUser, userDataAuthContext, logoutAuthContext } =
+    useAuthContext();
 
   function handleMenuMobile() {
     setMenuMobile(!menuMobile);
@@ -23,7 +26,6 @@ export default function Header() {
   function onChange(e: any) {
     const { value, name } = e.target;
     setForm({ ...form, [name]: value });
-    console.log(form);
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -94,11 +96,18 @@ export default function Header() {
               </>
             ) : (
               <div className="cta-desktop flex-aling">
-                <Link to={"/profile"} className=" ">
+                <img
+                  src={logout}
+                  alt=""
+                  onClick={logoutAuthContext}
+                  className="icon-small-2 mr-2"
+                  style={{ cursor: "pointer" }}
+                />
+                <Link to={"/profile"} className="">
                   <img
                     src={userDataAuthContext?.ImageProfile}
                     alt="foto de perfil"
-                    className="profile b-primary mr-2"
+                    className="profile b-primary mr-2 "
                   />
                 </Link>
                 <p className="color-white">Olá, {userDataAuthContext?.name}</p>
@@ -139,6 +148,7 @@ export default function Header() {
             </li>
           </ul>
         </div>
+        <GoToTop />
       </div>
     </>
   );
