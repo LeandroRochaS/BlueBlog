@@ -4,7 +4,6 @@ import buscaSvg from "../../images/svg/buscainput.svg";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../context/AuthContext";
-import logout from "../../images/svg/log-out.svg";
 import GoToTop from "../../utils/GoTop";
 
 const initialValueForm = {
@@ -15,8 +14,7 @@ export default function Header() {
   const [menuMobile, setMenuMobile] = useState(false);
   const [form, setForm] = useState(initialValueForm);
   const navigate = useNavigate();
-  const { isLoggedUser, userDataAuthContext, logoutAuthContext } =
-    useAuthContext();
+  const { isLoggedUser, userDataAuthContext } = useAuthContext();
 
   function handleMenuMobile() {
     setMenuMobile(!menuMobile);
@@ -96,13 +94,6 @@ export default function Header() {
               </>
             ) : (
               <div className="cta-desktop flex-aling">
-                <img
-                  src={logout}
-                  alt=""
-                  onClick={logoutAuthContext}
-                  className="icon-small-2 mr-2"
-                  style={{ cursor: "pointer" }}
-                />
                 <Link to={"/profile"} className="">
                   <img
                     src={userDataAuthContext?.ImageProfile}
