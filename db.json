@@ -135,7 +135,8 @@
       "surname": "Yousef Ali",
       "token": "E10ADC3949BA59ABBE56E057F20F883E",
       "description": "Front-End Dev & UI motion based in Brasília/Brazil, more than 8 years of experience in product development (user interaction, movement, performance, design faithful to design) and creating interfaces with out-of-the-box animations.",
-      "ImageProfile": "https://nyousefali.com.br/blog/profile/ny.jpg"
+      "ImageProfile": "https://nyousefali.com.br/blog/profile/ny.jpg",
+      "password": "12345"
     },
     {
       "id": 2,
@@ -144,7 +145,8 @@
       "surname": "Grace",
       "token": "E10ADC3949BA59ABBE56E057F20F883E",
       "description": "Sou UI Designer e apaixonada por tecnologia. Crio interfaces e escrevo para o blog.",
-      "ImageProfile": "https://nyousefali.com.br/blog/profile/emily.png"
+      "ImageProfile": "https://nyousefali.com.br/blog/profile/emily.png",
+      "password": "123456"
     },
     {
       "id": 3,
@@ -153,7 +155,8 @@
       "surname": "Jacob",
       "token": "E10ADC3949BA59ABBE56E057F20F883E",
       "description": "Sou fotógrafo profissional, amante de cinema e tecnologia. Colunista e nas horas vagas escrevo para o blog.",
-      "ImageProfile": "https://nyousefali.com.br/blog/profile/alex.png"
+      "ImageProfile": "https://nyousefali.com.br/blog/profile/alex.png",
+      "password": "1234567"
     }
   ]
 }
