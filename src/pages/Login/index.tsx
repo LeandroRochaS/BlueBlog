@@ -1,16 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Header from "../../components/Header";
 import logoBlog2 from "../../images/svg/blog-logo2.svg";
-import { UserLoginType } from "../../utils/types";
+import { UserLoginType, UserProfileType } from "../../utils/types";
 import { API } from "../../services/api";
 import { useAuthContext } from "../../context/AuthContext";
 
 export default function Login() {
   const [form, setForm] = useState<UserLoginType | any>();
   const [user, setUser] = useState<UserLoginType | any>();
-  const { userDataAuthContext, isLoggedUser, loginAuthContext } =
-    useAuthContext();
+  const { loginAuthContext } = useAuthContext();
 
   async function handleLogin(e: any) {
     e.preventDefault();
@@ -19,7 +18,7 @@ export default function Login() {
       const res = await API.get(`/user?user=${form.user}`);
       if (res.data && res.data.length > 0) {
         setUser(res.data[0]);
-        handleLoginContext();
+        handleLoginContext(res.data[0]);
       } else {
         console.log("Usuário não encontrado");
       }
@@ -28,16 +27,11 @@ export default function Login() {
     }
   }
 
-  useEffect(() => {
-    console.log("User Data:", userDataAuthContext);
-    console.log("Is Logged:", isLoggedUser);
-  }, [userDataAuthContext, isLoggedUser]);
-
-  function handleLoginContext() {
+  function handleLoginContext(res: UserProfileType) {
     console.log(user);
-    if (user.user === form.user && user.password === form.password) {
+    if (res.user === form.user && res.password === form.password) {
       console.log("logado");
-      loginAuthContext(user, user.token);
+      loginAuthContext(res);
     } else {
       console.log("Usuário ou senha incorretos");
     }
