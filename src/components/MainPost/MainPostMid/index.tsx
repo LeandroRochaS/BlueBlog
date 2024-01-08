@@ -7,9 +7,11 @@ export default function MainPostMid(item: PostType) {
   const [user, setUser] = useState<UserProfileType>();
 
   useEffect(() => {
-    API.get(`/user/${item.id_user}`).then((response) => {
-      setUser(response.data);
-    });
+    if (item && item.id_user) {
+      API.get(`/user/${item.id_user}`).then((response) => {
+        setUser(response.data);
+      });
+    }
   }, [item]);
 
   return (

@@ -7,7 +7,7 @@ export default function MainPost(item: PostType) {
   const [dataUser, setDataUser] = useState<UserProfileType>();
 
   useEffect(() => {
-    if (item) {
+    if (item && item.id_user) {
       API.get(`/user/${item.id_user}`).then((response) => {
         setDataUser(response.data);
       });
