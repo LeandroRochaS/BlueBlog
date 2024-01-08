@@ -7,7 +7,7 @@ export type AuthContextValue = {
   userDataAuthContext: UserProfileType | null;
   isLoggedUser: boolean;
   logoutAuthContext: () => void;
-  loginAuthContext: (userData: UserProfileType, jwt: string) => void;
+  loginAuthContext: (userData: UserProfileType) => void;
 };
 
 export const AuthContext = createContext<AuthContextValue | undefined>(
