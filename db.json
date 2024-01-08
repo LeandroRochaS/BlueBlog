@@ -125,18 +125,85 @@
       "views": "10",
       "status": true,
       "id": 9
+    },
+
+    {
+      "id": 11,
+      "id_user": 2,
+      "date": "25 NOV 2021",
+      "imageUrl": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8TyUyMGltcGFjdG8lMjBkYSUyMGludGVsaWclQzMlQUFuY2lhJTIwYXJ0aWZpY2lhbCUyMG5vJTIwZGVzaWduJTIwZGUlMjBpbnRlcmZhY2VzfGVufDB8fDB8fHww",
+      "category": "tecnologia",
+      "title": "O impacto da inteligência artificial no design de interfaces",
+      "resume": "Explorando como a inteligência artificial está transformando o design de interfaces, desde a personalização até a automação de tarefas repetitivas.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra. Curabitur sit amet nibh nec urna ullamcorper rhoncus. In hac habitasse platea dictumst. Sed varius urna nec ipsum vehicula fermentum. Vestibulum interdum lectus vel magna euismod, a ultricies ligula fermentum. Sed vel tortor nec mi rutrum bibendum. Nulla eu imperdiet nisl. Duis sagittis risus eu urna euismod, et ullamcorper ligula ultricies.",
+      "duration": "15",
+      "star": "4",
+      "views": "6",
+      "status": true
+    },
+    {
+      "id": 12,
+      "id_user": 3,
+      "date": "05 DEZ 2021",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1668383207771-dcf6e2d520f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zm90b2dyYWZpYXxlbnwwfHwwfHx8MA%3D%3D",
+      "category": "fotografia",
+      "title": "Como capturar a essência em retratos fotográficos",
+      "resume": "Dicas e técnicas para capturar a verdadeira essência de seus retratos. Desde a iluminação até a expressão do modelo, aprenda a criar fotos memoráveis.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra. Curabitur sit amet nibh nec urna ullamcorper rhoncus. In hac habitasse platea dictumst. Sed varius urna nec ipsum vehicula fermentum. Vestibulum interdum lectus vel magna euismod, a ultricies ligula fermentum. Sed vel tortor nec mi rutrum bibendum. Nulla eu imperdiet nisl. Duis sagittis risus eu urna euismod, et ullamcorper ligula ultricies.",
+      "duration": "10",
+      "star": "5",
+      "views": "5",
+      "status": true
+    },
+    {
+      "id": 13,
+      "id_user": 1,
+      "date": "12 DEZ 2021",
+      "imageUrl": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2FtZXN8ZW58MHx8MHx8fDA%3D",
+      "category": "games",
+      "title": "Os jogos mais esperados de 2022",
+      "resume": "Antecipando o próximo ano, confira a lista dos jogos mais aguardados de 2022. Desde aventuras épicas até inovações tecnológicas, descubra o que está por vir.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra. Curabitur sit amet nibh nec urna ullamcorper rhoncus. In hac habitasse platea dictumst. Sed varius urna nec ipsum vehicula fermentum. Vestibulum interdum lectus vel magna euismod, a ultricies ligula fermentum. Sed vel tortor nec mi rutrum bibendum. Nulla eu imperdiet nisl. Duis sagittis risus eu urna euismod, et ullamcorper ligula ultricies.",
+      "duration": "14",
+      "star": "4",
+      "views": "7",
+      "status": true
+    },
+    {
+      "id": 14,
+      "id_user": 3,
+      "date": "20 NOV 2021",
+      "imageUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNpbmVtYXxlbnwwfHwwfHx8MA%3D%3D",
+      "category": "cinema",
+      "title": "Análise crítica: Os indicados ao Oscar 2022",
+      "resume": "Explorando as produções cinematográficas que estão sendo cogitadas para o Oscar 2022. Desde dramas intensos até obras-primas da sétima arte.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare urna pharetra ut ac, pellentesque. Ultricies habitasse pretium purus viverra. Curabitur sit amet nibh nec urna ullamcorper rhoncus. In hac habitasse platea dictumst. Sed varius urna nec ipsum vehicula fermentum. Vestibulum interdum lectus vel magna euismod, a ultricies ligula fermentum. Sed vel tortor nec mi rutrum bibendum. Nulla eu imperdiet nisl. Duis sagittis risus eu urna euismod, et ullamcorper ligula ultricies.",
+      "duration": "12",
+      "star": "5",
+      "views": "9",
+      "status": true
     }
   ],
   "user": [
     {
       "id": 1,
-      "user": "nasseryousef",
-      "name": "Nasser",
-      "surname": "Yousef Ali",
+      "user": "leandrorochas",
+      "name": "Leandro",
+      "surname": "Rocha",
       "token": "E10ADC3949BA59ABBE56E057F20F883E",
-      "description": "Front-End Dev & UI motion based in Brasília/Brazil, more than 8 years of experience in product development (user interaction, movement, performance, design faithful to design) and creating interfaces with out-of-the-box animations.",
-      "ImageProfile": "https://nyousefali.com.br/blog/profile/ny.jpg",
-      "password": "12345"
+      "description": "Full-Stack Dev based in Sergipe/Brazil, more than 1 year of experience in web development.",
+      "ImageProfile": "https://avatars.githubusercontent.com/u/111878961?v=4",
+      "password": "123"
+    },
+    {
+      "id": 4,
+      "user": "teste",
+      "name": "Teste",
+      "surname": "Teste",
+      "token": "E10ADC3949BA59ABBE56E057F20F883E",
+      "description": "lorem ipsum dolor sit amet consectetur adipiscing elit, ultricies habitasse pretium purus viverra. Curabitur sit amet nibh nec urna ullamcorper rhoncus.",
+      "ImageProfile": "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGh1bWFufGVufDB8fDB8fHww",
+      "password": "123"
     },
     {
       "id": 2,

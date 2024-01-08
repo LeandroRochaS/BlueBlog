@@ -33,6 +33,15 @@
   }
 }
 
+.icon-small-2 {
+  max-width: 30px;
+  transition: 0.5s ease;
+
+  &:hover {
+    transform: translate(0, -4px, 0);
+  }
+}
+
 .icon-l {
   max-width: 120px;
   transition: 0.5s ease;

@@ -6,6 +6,7 @@ export type UserProfileType = {
   token: string;
   description: string;
   ImageProfile: string;
+  password: string;
 };
 
 export type PostType = {
