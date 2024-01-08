@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import "./styles.scss";
-import { PostType } from "utils/types";
+import { PostType } from "../../utils/types";
 
 export default function Banner(item: PostType) {
   return (
     <>
-      <section className="mt-5">
+      <section className="mt-5 container">
         <div className="img-banner hidden flex-center">
           <img src={item.imageUrl} alt="imagem de banner" />
         </div>
@@ -14,14 +15,17 @@ export default function Banner(item: PostType) {
             <h6 className="uppercase color-primary text-center">
               {item.category}
             </h6>
-            <a href="">
+            <Link to={`/post/${item.id}`}>
               <h4 className="text-center link-title">{item.title}</h4>
-            </a>
+            </Link>
             <p className="mt-1  text-center">{item.resume}</p>
             <div className="mt-4">
-              <a href="" className="link color-primary flex-center">
+              <Link
+                to={`/post/${item.id}`}
+                className="link color-primary flex-center"
+              >
                 Ler mais
-              </a>
+              </Link>
             </div>
           </div>
         </div>
