@@ -5,50 +5,47 @@ import logoBlog2 from "../../images/svg/blog-logo2.svg";
 import { UserLoginType, UserProfileType } from "../../utils/types";
 import { API } from "../../services/api";
 import { useAuthContext } from "../../context/AuthContext";
+import { Link, useNavigate } from "react-router-dom";
+import CarouselComponent from "../Carousel";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Login() {
   const [form, setForm] = useState<UserLoginType | any>();
-  const [user, setUser] = useState<UserLoginType | any>();
   const { loginAuthContext } = useAuthContext();
+  const navigate = useNavigate();
 
   async function handleLogin(e: any) {
     e.preventDefault();
 
-    try {
-      const res = await API.get(`/user?user=${form.user}`);
-      if (res.data && res.data.length > 0) {
-        setUser(res.data[0]);
-        handleLoginContext(res.data[0]);
-      } else {
-        console.log("Usuário não encontrado");
-      }
-    } catch (error) {
-      console.error("Erro ao buscar usuário", error);
+    const res = await API.get(`/user?user=${form.user}`);
+    if (res.data && res.data.length > 0) {
+      handleLoginContext(res.data[0]);
+    } else {
+      toast.error("Usuário não encontrado!");
     }
   }
 
   function handleLoginContext(res: UserProfileType) {
-    console.log(user);
     if (res.user === form.user && res.password === form.password) {
-      console.log("logado");
       loginAuthContext(res);
+
+      navigate("/");
     } else {
-      console.log("Usuário ou senha incorretos");
+      toast.error("Usuário ou senha incorretos!");
     }
   }
 
   function onChange(e: any) {
     const { value, name } = e.target;
     setForm({ ...form, [name]: value });
-    console.log(form);
   }
 
   return (
     <>
       <Header />
       <div className="row">
-        <div className="grid-4 "></div>
-        <div className="grid-4 ">
+        <div className="grid-6 ">
           <div className="flex-center">
             <img src={logoBlog2} alt="" className="icon-xl" />
           </div>
@@ -75,9 +72,6 @@ export default function Login() {
               autoComplete="off"
               onChange={onChange}
             />
-            <button type="submit" className="btn b-0 btn-login w-100 mt-3">
-              Entrar
-            </button>
             <div className="flex-space-between w-100 mt-3">
               <div className="flex checkbox">
                 <input className="mr-1" type="checkbox" name="lembrar" id="" />
@@ -87,10 +81,37 @@ export default function Login() {
                 Esqueceu a senha ?
               </a>
             </div>
+            <button type="submit" className="btn b-0 btn-login w-100 mt-3">
+              Entrar
+            </button>
+            <p className="color-white mt-2">
+              Não tem conta ?{" "}
+              <Link to={"/register"}>
+                <span
+                  style={{ textDecoration: "underline", cursor: "pointer" }}
+                >
+                  clique aqui para registrar{" "}
+                </span>
+              </Link>
+            </p>
           </form>
         </div>
-        <div className="grid-4 "></div>
+        <div className="grid-6">
+          <CarouselComponent />
+        </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </>
   );
 }

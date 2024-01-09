@@ -40,7 +40,6 @@ export default function Home() {
     API.get("/posts?_limit=4").then((response) => {
       setDestaques(response.data);
     });
-    console.log("está logado ??? " + isLoggedUser);
   }, [isLoggedUser]);
 
   return (

@@ -84,7 +84,7 @@ export default function Post() {
             </div>
             <div className="my-8">
               <h4>{post?.title}</h4>
-              <p>{post?.content}</p>
+              <p className="mt-2">{post?.content}</p>
             </div>
             <div className="b-black-2 card-post p-2 mt-4">
               <div className="flex-column ">
