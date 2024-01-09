@@ -42,6 +42,7 @@ export default function Home() {
     });
   }, [isLoggedUser]);
 
+  /*version 1.0 */
   return (
     <>
       <Header />
