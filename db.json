@@ -181,6 +181,34 @@
       "star": "5",
       "views": "9",
       "status": true
+    },
+    {
+      "date": "9 JAN 2024",
+      "category": "tecnologia",
+      "title": "As Últimas Inovações em Placas de Vídeo: O Futuro da Experiência Gráfica",
+      "resume": "Descubra as últimas tecnologias e avanços em placas de vídeo que prometem transformar sua experiência visual em computadores.",
+      "imageUrl": "https://images.unsplash.com/photo-1601153211050-ae2e1fa428d7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "duration": "5",
+      "content": "As placas de vídeo desempenham um papel crucial no avanço da computação gráfica, oferecendo experiências visuais imersivas. Este artigo destaca as principais novidades, incluindo arquiteturas avançadas das líderes do setor, como NVIDIA e AMD, que buscam eficiência energética e desempenho excepcional. Tecnologias como Ray Tracing e DLSS proporcionam gráficos realistas, enquanto a conectividade avançada, como PCIe 4.0, oferece transferência de dados mais rápida. A adaptação às crescentes tecnologias de Realidade Virtual (RV) e Realidade Aumentada (RA) proporciona uma experiência envolvente. Além disso, a indústria foca em melhorar o desempenho sem comprometer a eficiência energética, implementando tecnologias de refrigeração e otimização de processos. Este vislumbre das inovações promete uma revolução na forma como experimentamos gráficos em nossos dispositivos. Esteja preparado para surpresas emocionantes à medida que a tecnologia avança.",
+      "star": 4,
+      "views": 0,
+      "status": true,
+      "id_user": 4,
+      "id": 15
+    },
+    {
+      "date": "2 NOV 2023",
+      "title": "Explorando o Mundo de GTA V: Uma Jornada Épica de Crime e Aventura",
+      "category": "games",
+      "resume": "Mergulhe no emocionante universo de Grand Theft Auto V (GTA V), um dos jogos mais icônicos da história. Descubra a vastidão do mundo aberto, a complexidade dos personagens e a adrenalina das missões que tornaram este jogo uma obra-prima dos games.",
+      "imageUrl": "https://images.unsplash.com/photo-1469032923574-4f1413034019?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "duration": "10",
+      "content": "\nGrand Theft Auto V (GTA V) transcende a definição comum de um simples jogo; ele se torna uma experiência imersiva que conquistou a adoração de milhões de jogadores globalmente. Este artigo mergulha profundamente no universo de GTA V, explorando desde a magnífica recriação de Los Santos até as tramas intrincadas que envolvem os protagonistas Michael, Franklin e Trevor.\nNum mundo aberto rico e dinâmico, Los Santos se revela como uma cidade vibrante, pulsante de vida e atividades. Das praias ensolaradas aos bairros urbanos movimentados, o vasto playground do mundo aberto de GTA V convida os jogadores a explorarem cada canto.\nOs personagens complexos e cativantes adicionam camadas significativas à narrativa. Michael, o ex-assaltante de bancos em busca de redenção; Franklin, o jovem ambicioso buscando oportunidades; e Trevor, o psicopata imprevisível. Essa tríade de protagonistas contrastantes confere profundidade à história, tornando-a verdadeiramente inesquecível.\nAs missões épicas, que vão desde assaltos a bancos até perseguições de alta velocidade e atividades paralelas, mantêm os jogadores envolvidos numa experiência única. O modo online de GTA V expande ainda mais essa jornada, oferecendo um mundo persistente onde jogadores podem formar gangues, participar de atividades e competir em desafios.\nMesmo anos após o lançamento, os gráficos incríveis de GTA V continuam impressionantes, proporcionando visuais deslumbrantes que aprimoram ainda mais a imersão no jogo.\nPrepare-se para uma jornada épica em GTA V, onde os elementos de crime e aventura se entrelaçam para criar uma experiência que vai além dos limites dos jogos tradicionais. Se você ainda não explorou esse universo, é hora de embarcar nesta emocionante jornada.",
+      "star": 1,
+      "views": 0,
+      "status": true,
+      "id_user": 4,
+      "id": 16
     }
   ],
   "user": [
