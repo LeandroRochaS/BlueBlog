@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="row">
           <div className="grid-6 ">
             <h1 className="h0">
-              Blog<span>.</span>
+              Blue<span>.</span>
             </h1>
             <p className="mt-1">
               Um blog para todos. Escrever. Ler. Comentar. Contribuir. Aprender.

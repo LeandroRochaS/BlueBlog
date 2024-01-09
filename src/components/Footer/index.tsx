@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="footer-title mb-5">
             <img src={logo} alt="logo" className="mr-2 icon" />
             <h4>
-              blog <span className="pointer">.</span>
+              blue <span className="pointer">.</span>
             </h4>
           </div>
           <div className="row">
