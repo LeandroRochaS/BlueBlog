@@ -209,6 +209,20 @@
       "status": true,
       "id_user": 4,
       "id": 16
+    },
+    {
+      "date": "9 JAN 2024",
+      "category": "tecnologia",
+      "title": "Teste",
+      "resume": "teste",
+      "imageUrl": "https://images.unsplash.com/photo-1601153211050-ae2e1fa428d7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "duration": "10",
+      "content": "sdfsfsfsdfsfs",
+      "star": 2,
+      "views": 0,
+      "status": true,
+      "id_user": 5,
+      "id": 17
     }
   ],
   "user": [
@@ -251,6 +265,16 @@
       "description": "Sou fotógrafo profissional, amante de cinema e tecnologia. Colunista e nas horas vagas escrevo para o blog.",
       "ImageProfile": "https://nyousefali.com.br/blog/profile/alex.png",
       "password": "1234567"
+    },
+    {
+      "user": "teste5",
+      "password": "123",
+      "name": "teste",
+      "surname": "teste",
+      "token": "1232323",
+      "ImageProfile": "https://images.unsplash.com/photo-1569931727734-b0c1138bfd87?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGVzc29hfGVufDB8fDB8fHww",
+      "description": "tewewtwetwet",
+      "id": 5
     }
   ]
 }
