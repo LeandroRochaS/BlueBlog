@@ -30,7 +30,11 @@ export default function Contact() {
                 Aqui você vai conseguir mais informações sobre o projeto Blog
                 utilizado
               </p>
-              <form>
+              <form
+                action="mailto::lerocha644@gmai.com"
+                method="POST"
+                encType="text/plain"
+              >
                 <div className="form-group">
                   <label htmlFor="name">Nome</label>
                   <input
@@ -61,7 +65,9 @@ export default function Contact() {
                     placeholder="Mensagem"
                   ></textarea>
                 </div>
-                <button className="btn btn-login w-50 mt-2">Enviar</button>
+                <button type="submit" className="btn btn-login w-50 mt-2">
+                  Enviar
+                </button>
               </form>
             </div>
             <div className="grid-1"></div>
