@@ -21,7 +21,6 @@ export default function PersonalData() {
               disabled
               value={userData?.id}
               className="mt-1 color-gray"
-              color-greay
               type="text"
               id="id"
               name="id"
@@ -34,7 +33,6 @@ export default function PersonalData() {
             <input
               disabled
               className="mt-1 color-gray"
-              color-greay
               type="text"
               id="user"
               name="user"
@@ -48,7 +46,6 @@ export default function PersonalData() {
             <input
               disabled
               className="mt-1 color-gray"
-              color-greay
               type="text"
               id="name"
               name="name"
