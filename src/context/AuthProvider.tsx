@@ -18,7 +18,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (userData) {
-      console.log("Usuário logado");
       setIsLoggedUser(true);
       // Atualize o localStorage ao efetuar login
       localStorage.setItem("userData", JSON.stringify(userData));
