@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./styles.scss";
 
 type ArticleProps = {
@@ -27,12 +28,13 @@ export default function Article({ title, subtitle, imgArticle }: ArticleProps) {
               </div>
             </div>
             <div className="article-right">
-              <a
+              <Link
+                to={"/search/' '"}
                 className="flex-aling-center color-primary nav-link"
                 style={{ cursor: "pointer" }}
               >
-                Explorar mais artigos {">"}
-              </a>
+                <p className="color-primary p3">Explorar mais artigos {">"}</p>
+              </Link>
             </div>
           </div>
         </div>
