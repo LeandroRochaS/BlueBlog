@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { useAuthContext } from "../../context/AuthContext";
 import { API } from "../../services/api";
+import { validarFormularioRegister } from "../../utils/Verifications";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 type FormElements = {
-  id_user?: number;
   date?: string;
   category?: string;
   title?: string;
@@ -41,17 +43,13 @@ export default function AddPost() {
   function handleOnChange(e: any) {
     const { value, name } = e.target;
     setForm({ ...form, [name]: value });
-    console.log(form);
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function handleSubmit(e: any) {
     e.preventDefault();
-    console.log(form);
 
     const dateString = form?.date;
-
-    handleValidatorForm();
 
     const date = new Date(dateString!);
     const month = date.getMonth();
@@ -59,7 +57,6 @@ export default function AddPost() {
     const dataFormatada = `${date.getDate() + 1} ${
       meses[month]
     } ${date.getFullYear()}`;
-    console.log(dataFormatada.toUpperCase());
 
     const data = {
       ...form,
@@ -70,44 +67,15 @@ export default function AddPost() {
       id_user: userDataAuthContext?.id,
     };
 
-    if (handleValidatorForm()) console.log(data);
-
-    console.log("error");
-  }
-
-  function handleValidatorForm() {
-    const inputNames = [
-      "date",
-      "category",
-      "title",
-      "resume",
-      "image",
-      "duration",
-      "description",
-    ];
-    let formIsValid = true;
-
-    inputNames.forEach((name) => {
-      const nameElement = name as keyof FormElements;
-      const input = document.querySelector(`[name="${name}"]`);
-      const value = form?.[nameElement];
-
-      if (value === undefined || value === "") {
-        input?.classList.add("error");
-        formIsValid = false;
-      } else {
-        input?.classList.remove("error");
-      }
-    });
-
-    setInterval(() => {
-      inputNames.forEach((name) => {
-        const input = document.querySelector(`[name="${name}"]`);
-        input?.classList.remove("error");
-      });
-    }, 4000);
-
-    return formIsValid;
+    if (validarFormularioRegister()) {
+      API.post("/posts", data)
+        .then(() => {
+          toast.success("Post adicionado com sucesso!");
+        })
+        .catch(() => {
+          toast.error("Erro ao adicionar post!");
+        });
+    }
   }
 
   return (
@@ -183,7 +151,7 @@ export default function AddPost() {
                 className="mt-1 inputform"
                 type="text"
                 id="image"
-                name="image"
+                name="imageUrl"
                 onChange={handleOnChange}
               />
             </div>
@@ -214,7 +182,7 @@ export default function AddPost() {
                 className="mt-1 w-100 inputform"
                 rows={10}
                 id="description"
-                name="description"
+                name="content"
                 onChange={handleOnChange}
               />
             </div>
@@ -226,6 +194,18 @@ export default function AddPost() {
           </div>
         </form>
       </section>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </>
   );
 }
