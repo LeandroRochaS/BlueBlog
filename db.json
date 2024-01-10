@@ -223,6 +223,20 @@
       "status": true,
       "id_user": 5,
       "id": 17
+    },
+    {
+      "date": "24 JAN 2024",
+      "category": "fotografia",
+      "title": "teste2",
+      "resume": "teste",
+      "imageUrl": "https://images.unsplash.com/photo-1601153211050-ae2e1fa428d7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "duration": "7",
+      "content": "teste",
+      "star": 3,
+      "views": 0,
+      "status": true,
+      "id_user": 4,
+      "id": 18
     }
   ],
   "user": [
