@@ -47,7 +47,7 @@ Go to the project directory
 Install dependencies
 
 ```bash
-  npm install
+  npm install && npm i json-server@0.17.4
 ```
 
 Start the server

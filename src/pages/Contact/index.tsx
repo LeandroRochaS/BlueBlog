@@ -84,7 +84,7 @@ export default function Contact() {
               </div>
               <div className="mb-4">
                 <h6 className="color-primary ">E-mail</h6>
-                <p>lerocha644@gmai.com</p>
+                <p>lerocha644@gmail.com</p>
               </div>
               <div className="">
                 <h6 className="color-primary mb-2">Redes sociais</h6>
